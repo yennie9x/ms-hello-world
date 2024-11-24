@@ -48,6 +48,7 @@ jobs:
           environment_name: "HelloWorldApp-env"      # Replace with your Elastic Beanstalk environment name
           region: "us-east-1"                  # Replace with your AWS region
           version_label: ${{ github.sha }}     # Use the commit SHA as the version label
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_access_key_id: AKIAUKTP5SMTXEE7CMNQ
+          aws_access_key: AKIAUKTP5SMTXEE7CMNQ
+          aws_secret_access_key: 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
           deployment_package: "./deploy/application.jar"
