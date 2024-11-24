@@ -34,11 +34,11 @@ jobs:
       - name: Build the microservice
         run: ./gradlew clean build -x test
 
-      # Step 5: Prepare deployment package
-      - name: Prepare JAR for Elastic Beanstalk
-        run: |
-          mkdir -p deploy  # Ensure the deploy directory exists
-          cp build/libs/*.jar deploy/application.jar
+#      # Step 5: Prepare deployment package
+#      - name: Prepare JAR for Elastic Beanstalk
+#        run: |
+#          mkdir -p deploy  # Ensure the deploy directory exists
+#          cp build/libs/*.jar deploy/application.jar
 
       # Step 6: Deploy to Elastic Beanstalk
       - name: Deploy to AWS Elastic Beanstalk
