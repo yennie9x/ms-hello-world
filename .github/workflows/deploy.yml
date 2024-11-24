@@ -35,7 +35,7 @@ jobs:
         run: ./gradlew clean build -x test
 
       - name: Debug AWS Access Key ID
-        run: echo "AWS Access Key ID $AWS_ACCESS_KEY_ID"
+        run: echo "AWS Access Key ID ${{ secrets.AWS_ACCESS_KEY_ID }}"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
 
@@ -50,5 +50,6 @@ jobs:
           aws_access_key_id: AKIAUKTP5SMTXEE7CMNQ
           aws_access_key: AKIAUKTP5SMTXEE7CMNQ
           aws_secret_access_key: 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
+          aws_secret_key: o+6RSTLaiMmrNKH4mcDwIuTTfIFxPzE8Ax4lIjpb
           deployment_package: "./deploy/application.jar"
 
