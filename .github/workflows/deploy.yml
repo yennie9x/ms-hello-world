@@ -52,3 +52,8 @@ jobs:
           aws_access_key: AKIAUKTP5SMTXEE7CMNQ
           aws_secret_access_key: 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
           deployment_package: "./deploy/application.jar"
+      - name: Debug Secrets
+        run:
+          echo "AWS Access Key ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
